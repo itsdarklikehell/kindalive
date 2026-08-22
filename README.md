@@ -2,7 +2,7 @@
 
 Robot emotions through simulated neurochemistry — shown on an LED dot-matrix face.
 
-![The Kindalive LED dot-matrix face reacting to "You won the lottery!" with joy, then drooping into steel-blue worry at "The cat is missing and a storm is rolling in"](docs/screenshots/face-demo.gif)
+![A five-message conversation with the Kindalive robot: each typed message fires visible chemical impulses — dopamine, cortisol, adrenaline bars spiking and crashing — while the LED dot-matrix face flows through excitement, happiness, anger, sadness, and bonding](docs/screenshots/face-demo.gif)
 
 Kindalive models robot emotions as **emergent states from simulated
 body chemistry**, not as discrete labels. There is no `mood = "happy"`
