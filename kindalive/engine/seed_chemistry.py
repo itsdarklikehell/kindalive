@@ -8,7 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-from kindalive.engine.chemicals import Chemical, SPECIES_DEFAULTS
+from kindalive.engine.chemicals import SPECIES_DEFAULTS, Chemical
 
 
 @dataclass

@@ -1,7 +1,7 @@
 """Tests for emotion projection from chemical state."""
 
-from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.emotions.projection import EmotionProjection
+from kindalive.engine.chemicals import Chemical, ChemicalState
 
 
 def test_high_dopamine_serotonin_means_happiness():

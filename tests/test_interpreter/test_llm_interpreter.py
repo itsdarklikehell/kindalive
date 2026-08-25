@@ -3,11 +3,10 @@
 import json
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
-from kindalive.interpreter.text_input import UserText
 from kindalive.interpreter.llm_interpreter import LLMInterpreter, MockLLMBackend
 from kindalive.interpreter.prompt_builder import RobotContext
+from kindalive.interpreter.text_input import UserText
 
 
 def _context() -> RobotContext:

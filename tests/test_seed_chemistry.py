@@ -2,11 +2,8 @@
 
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
-from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.engine.seed_chemistry import SeedChemistry
-from kindalive.personality.presets import PERSONALITY_PRESETS
-from kindalive.robot import Robot
 
 
 def test_species_defaults_produce_expected_baselines():

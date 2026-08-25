@@ -1,9 +1,9 @@
 """Tests for PromptBuilder."""
 
-from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.emotions.projection import EmotionProjection
-from kindalive.interpreter.text_input import UserText
+from kindalive.engine.chemicals import ChemicalState
 from kindalive.interpreter.prompt_builder import PromptBuilder, RobotContext
+from kindalive.interpreter.text_input import UserText
 
 
 def test_system_prompt_contains_chemicals():

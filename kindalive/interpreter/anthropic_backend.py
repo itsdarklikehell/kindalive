@@ -16,7 +16,6 @@ except ImportError as exc:  # pragma: no cover - exercised only without the extr
         'Install it with: pip install "kindalive[anthropic]"'
     ) from exc
 
-from kindalive.interpreter.llm_interpreter import LLMBackend
 
 
 class AnthropicBackend:

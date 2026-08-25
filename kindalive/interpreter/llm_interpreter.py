@@ -13,12 +13,11 @@ import traceback
 from typing import Any, Protocol
 
 from kindalive.engine.impulse import ChemicalImpulse
-from kindalive.interpreter.text_input import UserText
 from kindalive.interpreter.fallback_rules import lookup_fallback
 from kindalive.interpreter.impulse_cache import ImpulseCache
 from kindalive.interpreter.prompt_builder import PromptBuilder, RobotContext
+from kindalive.interpreter.text_input import UserText
 from kindalive.interpreter.validator import ValidationError, validate_raw_impulses
-
 
 # Strip ```json ... ``` or ``` ... ``` wrappers that some models add even
 # when told not to. Matches fences at the start/end of the response with
@@ -235,7 +234,7 @@ class LLMInterpreter:
                 return lookup_fallback(event)
             self.last_path = "fallback"
             return []
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 (intentional catch-all in runtime)
             # Network errors, timeouts, etc.
             self.last_error = f"{type(e).__name__}: {e}"
             _log_fallback("interpret", event, self.last_error, raw_json)

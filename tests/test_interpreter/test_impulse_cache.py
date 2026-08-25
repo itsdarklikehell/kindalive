@@ -2,12 +2,12 @@
 
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.impulse import ChemicalImpulse
-from kindalive.interpreter.text_input import UserText
 from kindalive.interpreter.impulse_cache import (
-    ImpulseCache,
-    REALTIME_TTL,
     BACKGROUND_TTL,
+    REALTIME_TTL,
+    ImpulseCache,
 )
+from kindalive.interpreter.text_input import UserText
 
 
 def _event(urgency: str = "background") -> UserText:

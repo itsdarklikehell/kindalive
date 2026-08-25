@@ -11,8 +11,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.engine.chemicals import Chemical, ChemicalState
 
 
 def _clamp(value: float) -> float:

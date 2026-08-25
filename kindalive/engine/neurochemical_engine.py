@@ -6,7 +6,6 @@ with sub-stepping for numerical stability.
 
 from __future__ import annotations
 
-import time as _time
 from collections import defaultdict
 
 from kindalive.engine.chemicals import Chemical, ChemicalState
