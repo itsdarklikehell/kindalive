@@ -2,11 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import datetime
-
 import pytest
 from hypothesis import HealthCheck, settings
-
 from kindalive.engine.chemicals import Chemical
 
 # Coverage instrumentation makes individual hypothesis examples slow enough
@@ -18,7 +15,6 @@ settings.load_profile("ci")
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
-from kindalive.engine.seed_chemistry import SeedChemistry
 
 
 @pytest.fixture

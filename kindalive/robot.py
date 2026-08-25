@@ -8,18 +8,21 @@ from __future__ import annotations
 
 import json
 
+from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.emotions.projection import EmotionProjection
 from kindalive.engine.chemicals import ChemicalState
-from kindalive.engine.clock import Clock, ManualClock  # noqa: F401 (ManualClock used in isinstance)
+from kindalive.engine.clock import (
+    Clock,
+    ManualClock,
+)
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.engine.seed_chemistry import SeedChemistry
-from kindalive.emotions.emotion_vector import EmotionVector
-from kindalive.emotions.projection import EmotionProjection
 from kindalive.expression.text_output import TextExpressionOutput
-from kindalive.interpreter.text_input import UserText
 from kindalive.interpreter.event_router import RealtimeRouter
 from kindalive.interpreter.llm_interpreter import LLMBackend, LLMInterpreter
 from kindalive.interpreter.prompt_builder import PromptBuilder, RobotContext
+from kindalive.interpreter.text_input import UserText
 from kindalive.personality.presets import get_default_affinity, get_seed
 
 # How many chat messages of history to keep (each exchange is 2: the

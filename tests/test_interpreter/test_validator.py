@@ -1,14 +1,13 @@
 """Tests for ImpulseValidator."""
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.interpreter.validator import (
+    MAX_DELTA,
+    MAX_DURATION,
+    MIN_DELTA,
     ValidationError,
     validate_raw_impulses,
-    MAX_DELTA,
-    MIN_DELTA,
-    MAX_DURATION,
 )
 
 

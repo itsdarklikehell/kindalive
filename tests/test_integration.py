@@ -1,14 +1,13 @@
 """Full pipeline scenario tests."""
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
-from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.engine.seed_chemistry import SeedChemistry
 from kindalive.personality.presets import PERSONALITY_PRESETS, get_seed
 from kindalive.robot import Robot
+
 from tests.conftest import ImpulseFactory
 
 
@@ -62,7 +61,6 @@ def test_mood_recovery():
 
 
 def test_personality_affects_reaction():
-    clock = ManualClock()
     stoic_seed = get_seed("stoic")
     anxious_seed = get_seed("anxious")
 

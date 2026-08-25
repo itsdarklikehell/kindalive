@@ -7,8 +7,8 @@ and the surrounding pipeline. Live LLM calibration runs lives in
 
 from __future__ import annotations
 
-from kindalive.engine.chemicals import ChemicalState
 from kindalive.emotions.projection import EmotionProjection
+from kindalive.engine.chemicals import ChemicalState
 from kindalive.interpreter.prompt_builder import (
     INTERPRETER_SYSTEM_PROMPT,
     PromptBuilder,

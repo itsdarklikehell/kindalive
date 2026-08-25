@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Protocol
 
-from kindalive.engine.chemicals import ChemicalState
 from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.engine.chemicals import ChemicalState
 
 
 class ExpressionOutput(Protocol):

@@ -16,14 +16,13 @@ from __future__ import annotations
 import os
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
 from kindalive.robot import Robot
 
 # `anthropic` is an optional dependency — skip the whole module if the
 # SDK isn't installed, before importing AnthropicBackend at use time.
-anthropic = pytest.importorskip("anthropic")  # noqa: F841
+anthropic = pytest.importorskip("anthropic")
 
 pytestmark = [
     pytest.mark.llm,

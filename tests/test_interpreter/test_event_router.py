@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.interpreter.event_router import RealtimeRouter

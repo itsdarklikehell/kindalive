@@ -1,9 +1,8 @@
 """Tests for TextExpressionOutput."""
 
 import pytest
-
-from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.expression.text_output import TextExpressionOutput
 
 

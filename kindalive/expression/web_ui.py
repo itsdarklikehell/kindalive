@@ -29,6 +29,7 @@ except ImportError as exc:  # pragma: no cover - exercised only without the extr
 
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
+from kindalive.expression.face import FaceProjection
 from kindalive.expression.face_3d import (
     DEFAULT_MOOD_COLOR,
     WEB_ASSETS_DIR,
@@ -37,7 +38,6 @@ from kindalive.expression.face_3d import (
     face_payload,
     payload_js,
 )
-from kindalive.expression.face import FaceProjection
 from kindalive.interpreter.llm_interpreter import LLMBackend
 from kindalive.robot import Robot
 
@@ -642,7 +642,7 @@ def main() -> None:
         backend, label = _resolve_backend(args)
     except SystemExit:
         raise
-    except Exception as e:  # backend init failure → run offline
+    except Exception as e:  # backend init failure → run offline  # noqa: BLE001 (intentional catch-all in runtime)
         print(f"Warning: could not initialize LLM backend: {e}")
         backend, label = None, ""
 

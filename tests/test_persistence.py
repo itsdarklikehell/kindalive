@@ -4,8 +4,6 @@ import json
 import tempfile
 from pathlib import Path
 
-import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.impulse import ChemicalImpulse

@@ -5,8 +5,8 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 
-from kindalive.engine.chemicals import ChemicalState
 from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.engine.chemicals import ChemicalState
 from kindalive.interpreter.text_input import UserText
 
 INTERPRETER_SYSTEM_PROMPT = """\

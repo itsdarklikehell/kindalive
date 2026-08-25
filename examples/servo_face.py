@@ -26,7 +26,6 @@ import time
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.expression.face import FaceProjection, FaceState
-
 from led_matrix_face import MOODS  # same demo impulse recipes
 
 # channel -> (muscle attribute, rest angle, full-contraction angle).
