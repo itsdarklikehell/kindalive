@@ -69,7 +69,7 @@ def main() -> None:
         try:
             urllib.request.urlopen(url, timeout=1)
             break
-        except Exception:
+        except Exception:  # noqa: BLE001  (transient: wait then retry screenshot)
             time.sleep(0.5)
     else:
         print("Server did not start in time")

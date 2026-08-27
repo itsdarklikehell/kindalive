@@ -23,11 +23,11 @@ from __future__ import annotations
 import argparse
 import time
 
+from led_matrix_face import MOODS  # same demo impulse recipes
+
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.expression.face import FaceProjection, FaceState
-
-from led_matrix_face import MOODS  # same demo impulse recipes
 
 # channel -> (muscle attribute, rest angle, full-contraction angle).
 # Angles can run "backwards" (rest > full) for mirrored linkages.

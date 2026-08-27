@@ -12,7 +12,7 @@ from kindalive.robot import Robot
 
 def test_web_ui_module_imports():
     """Smoke test: the web_ui module imports without error."""
-    from kindalive.expression import web_ui  # noqa: F401
+    from kindalive.expression import web_ui
 
     assert hasattr(web_ui, "create_app")
     assert hasattr(web_ui, "main")

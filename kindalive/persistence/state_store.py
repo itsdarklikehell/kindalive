@@ -16,10 +16,9 @@ import json
 from pathlib import Path
 from typing import Any
 
-from kindalive.engine.chemicals import Chemical, ChemicalState
+from kindalive.engine.chemicals import Chemical
 from kindalive.engine.impulse import ActiveSustainedImpulse, ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
-from kindalive.engine.seed_chemistry import SeedChemistry
 
 
 def serialize_engine(engine: NeurochemicalEngine) -> dict[str, Any]:

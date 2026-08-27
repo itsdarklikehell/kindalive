@@ -253,7 +253,7 @@ async def test_text_to_face_payload_chain():
 
     # The renderer payload carries the muscles + the dominant mood,
     # exactly as the web UI builds it each tick.
-    dominant_name, dominant_val = robot.current_emotions().dominant()
+    _, dominant_val = robot.current_emotions().dominant()
     payload = face_payload(face_after, mood_intensity=dominant_val)
     assert set(payload["muscles"]) == set(FACE_WEIGHTS)
     assert payload["muscles"]["lip_corner_pull"] == round(

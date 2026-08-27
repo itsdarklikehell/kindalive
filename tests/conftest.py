@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from datetime import datetime
-
 import pytest
 from hypothesis import HealthCheck, settings
 
@@ -18,7 +16,6 @@ settings.load_profile("ci")
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
-from kindalive.engine.seed_chemistry import SeedChemistry
 
 
 @pytest.fixture

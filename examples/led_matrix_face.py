@@ -25,9 +25,9 @@ import argparse
 import time
 
 from kindalive.engine.chemicals import Chemical
+from kindalive.engine.clock import ManualClock
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
-from kindalive.engine.clock import ManualClock
 from kindalive.expression.face import FaceProjection, FaceState
 
 # Impulse recipes for the demo moods. In a real robot these come from
@@ -119,7 +119,7 @@ class Max7219Matrix:
     """Real renderer: pushes frames to a MAX7219 over SPI."""
 
     def __init__(self) -> None:
-        from luma.core.interface.serial import spi, noop
+        from luma.core.interface.serial import noop, spi
         from luma.led_matrix.device import max7219
 
         self._device = max7219(spi(port=0, device=0, gpio=noop()))

@@ -107,14 +107,14 @@ def simulate() -> dict[str, Any]:
     clock = ManualClock()
     robot = Robot(personality="default", clock=clock)
     total = INTRO_SECONDS + BEAT_SECONDS * len(BEATS) + OUTRO_SECONDS
-    n_frames = int(round(total * FPS))
+    n_frames = round(total * FPS)
     dt_sim = TIME_SCALE / FPS
 
     beat_meta: list[dict[str, Any]] = []
     impulse_frames: dict[int, int] = {}
     for i, (prompt, reply, recipe) in enumerate(BEATS):
         start = INTRO_SECONDS + i * BEAT_SECONDS
-        impulse_frames[int(round((start + IMPULSE_AT) * FPS))] = i
+        impulse_frames[round((start + IMPULSE_AT) * FPS)] = i
         beat_meta.append({
             "start": start,
             "end": start + BEAT_SECONDS,
@@ -488,7 +488,7 @@ def assemble_gif(shots_dir: Path, out_path: Path, n_frames: int) -> None:
     print("Assembling GIF...")
     size = (VIEW_W, VIEW_H)
 
-    def load(i: int) -> "Image.Image":
+    def load(i: int) -> Image.Image:
         im = Image.open(shots_dir / f"f{i:04d}.png").convert("RGB")
         return im.resize(size, Image.LANCZOS)
 
@@ -506,7 +506,7 @@ def assemble_gif(shots_dir: Path, out_path: Path, n_frames: int) -> None:
     import numpy as np
 
     frames_out = []
-    prev_arr: "np.ndarray | None" = None
+    prev_arr: np.ndarray | None = None
     for i in range(n_frames):
         q = load(i).quantize(palette=pal_img, dither=Image.Dither.NONE)
         arr = np.asarray(q, dtype=np.uint8)

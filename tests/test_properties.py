@@ -1,11 +1,12 @@
 """Property-based tests using Hypothesis."""
 
-from hypothesis import given, settings, strategies as st
+from hypothesis import given, settings
+from hypothesis import strategies as st
 
+from kindalive.emotions.projection import EmotionProjection
 from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
-from kindalive.emotions.projection import EmotionProjection
 
 
 @given(

@@ -10,8 +10,8 @@ from __future__ import annotations
 
 from typing import Callable
 
-from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.emotions.emotion_vector import EmotionVector
+from kindalive.engine.chemicals import Chemical, ChemicalState
 
 # Type alias for rule functions
 _RuleFn = Callable[[dict[Chemical, float]], bool]
