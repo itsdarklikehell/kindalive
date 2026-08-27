@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import httpx
 import pytest
-
 from kindalive.interpreter.openai_backend import (
     DEFAULT_BASE_URL,
     DEFAULT_MODEL,

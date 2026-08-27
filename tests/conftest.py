@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import pytest
 from hypothesis import HealthCheck, settings
-
 from kindalive.engine.chemicals import Chemical
 
 # Coverage instrumentation makes individual hypothesis examples slow enough

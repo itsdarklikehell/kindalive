@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from hypothesis import given, settings
 from hypothesis import strategies as st
-
 from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.expression.face import (
     FACE_WEIGHTS,

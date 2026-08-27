@@ -8,7 +8,7 @@ Produces text like:
 
 from __future__ import annotations
 
-from typing import Callable
+from collections.abc import Callable
 
 from kindalive.emotions.emotion_vector import EmotionVector
 from kindalive.engine.chemicals import Chemical, ChemicalState

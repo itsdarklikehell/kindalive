@@ -73,6 +73,9 @@ dev = [
     "pytest-cov>=5.0",
     "hypothesis>=6.0",
     "mypy>=1.10",
+    # httpx is needed by default-collected backend tests
+    # (test_openai_backend.py) and the OpenAI-compatible backend.
+    "httpx>=0.27",
 ]
 
 [tool.setuptools.packages.find]

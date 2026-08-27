@@ -1,13 +1,13 @@
 """Full pipeline scenario tests."""
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
 from kindalive.engine.seed_chemistry import SeedChemistry
 from kindalive.personality.presets import PERSONALITY_PRESETS, get_seed
 from kindalive.robot import Robot
+
 from tests.conftest import ImpulseFactory
 
 

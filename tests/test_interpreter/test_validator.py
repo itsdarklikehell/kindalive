@@ -1,7 +1,6 @@
 """Tests for ImpulseValidator."""
 
 import pytest
-
 from kindalive.engine.chemicals import Chemical
 from kindalive.interpreter.validator import (
     MAX_DELTA,
