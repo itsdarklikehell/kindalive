@@ -35,10 +35,11 @@ def main() -> None:
     out_path = Path(args.out).resolve()
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    from nicegui import ui
+
     from kindalive.engine.chemicals import Chemical
     from kindalive.engine.impulse import ChemicalImpulse
     from kindalive.expression.web_ui import create_app
-    from nicegui import ui
 
     state = create_app(personality="default", llm_backend=None)
 
@@ -68,7 +69,7 @@ def main() -> None:
         try:
             urllib.request.urlopen(url, timeout=1)
             break
-        except Exception:  # noqa: BLE001 (intentional catch-all in runtime)
+        except Exception:  # noqa: BLE001  (transient: wait then retry screenshot)
             time.sleep(0.5)
     else:
         print("Server did not start in time")

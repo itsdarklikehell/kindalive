@@ -7,6 +7,7 @@ the 3D-face renderer payload out.
 from __future__ import annotations
 
 import pytest
+
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
 from kindalive.engine.neurochemical_engine import NeurochemicalEngine
@@ -252,7 +253,7 @@ async def test_text_to_face_payload_chain():
 
     # The renderer payload carries the muscles + the dominant mood,
     # exactly as the web UI builds it each tick.
-    dominant_val = robot.current_emotions().dominant()[1]
+    _, dominant_val = robot.current_emotions().dominant()
     payload = face_payload(face_after, mood_intensity=dominant_val)
     assert set(payload["muscles"]) == set(FACE_WEIGHTS)
     assert payload["muscles"]["lip_corner_pull"] == round(

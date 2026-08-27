@@ -642,7 +642,7 @@ def main() -> None:
         backend, label = _resolve_backend(args)
     except SystemExit:
         raise
-    except Exception as e:  # backend init failure → run offline  # noqa: BLE001 (intentional catch-all in runtime)
+    except Exception as e:  # backend init failure → run offline  # noqa: BLE001
         print(f"Warning: could not initialize LLM backend: {e}")
         backend, label = None, ""
 

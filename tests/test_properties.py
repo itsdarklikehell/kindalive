@@ -2,6 +2,7 @@
 
 from hypothesis import given, settings
 from hypothesis import strategies as st
+
 from kindalive.emotions.projection import EmotionProjection
 from kindalive.engine.chemicals import Chemical, ChemicalState
 from kindalive.engine.clock import ManualClock

@@ -9,7 +9,8 @@ the cache + LLM + apply pipeline into one call site that
 from __future__ import annotations
 
 import asyncio
-from collections.abc import Awaitable, Callable
+from collections.abc import Awaitable
+from typing import Callable
 
 from kindalive.engine.impulse import ChemicalImpulse
 from kindalive.interpreter.llm_interpreter import LLMInterpreter

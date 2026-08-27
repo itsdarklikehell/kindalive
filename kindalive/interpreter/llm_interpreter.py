@@ -234,7 +234,7 @@ class LLMInterpreter:
                 return lookup_fallback(event)
             self.last_path = "fallback"
             return []
-        except Exception as e:  # noqa: BLE001 (intentional catch-all in runtime)
+        except Exception as e:  # noqa: BLE001  (offline-fallback: any backend init failure → run without LLM)
             # Network errors, timeouts, etc.
             self.last_error = f"{type(e).__name__}: {e}"
             _log_fallback("interpret", event, self.last_error, raw_json)
