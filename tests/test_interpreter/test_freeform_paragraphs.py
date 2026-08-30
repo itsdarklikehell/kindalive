@@ -16,6 +16,7 @@ from __future__ import annotations
 import os
 
 import pytest
+
 from kindalive.engine.chemicals import Chemical
 from kindalive.engine.clock import ManualClock
 from kindalive.robot import Robot

@@ -3,6 +3,7 @@
 import json
 
 import pytest
+
 from kindalive.engine.chemicals import Chemical
 from kindalive.interpreter.llm_interpreter import LLMInterpreter, MockLLMBackend
 from kindalive.interpreter.prompt_builder import RobotContext
